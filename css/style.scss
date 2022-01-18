@@ -1,0 +1,637 @@
+// Code starts here -------- Code starts here --------- Code starts here
+
+$color:#11272E;
+$buttoncolor:#FF385C;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'medium-font', sans-serif;
+    // background-color: black;
+}
+
+@mixin flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@font-face {
+    font-family:medium-font;
+    src: url('../Assets/fonts/ITC\ Avant\ Garde\ Gothic\ Medium.otf');
+}
+
+@font-face {
+    font-family:bold-font;
+    src: url('../Assets/fonts/ITC\ Avant\ Garde\ Gothic\ Bold.otf');
+}
+
+button{
+    font-family: 'medium-font', sans-serif;
+}
+
+// Custom class for the bold text 
+.textwithbold{
+    font-family: bold-font;
+}
+
+// Custom class for the Same Color  text 
+.samecolortext{
+    color: #587083;
+    font-weight: 500;
+}
+
+// Header Starts Here
+header{
+    width: 100%;
+    height: 100px;
+    position: sticky;
+    top: -1px;
+    z-index: 10;
+
+    nav{
+        width: 71.4%;
+        height:100%;
+        margin:auto auto ;
+        @include flex();
+
+        .brand{
+            width:60%;
+            margin: auto 0;
+        }
+
+        ul{
+            width: 24.6%;
+            list-style: none;
+            @include flex();
+            margin: auto 0;
+            
+            li{
+               a{
+                    color: #587083;
+                    font-weight:500;
+                    text-decoration: none;
+                    font-size:16.3px;
+                    margin: 0 auto;
+                    letter-spacing: -0.1px;
+                }
+            }
+        }
+
+        .booking-slot{
+            width: 7.6%;
+            margin: auto 0;
+            text-align:left;
+            
+            button{
+                width:92%;
+                height: 40px;
+                border: none;
+                border-radius:5px;
+                background-color: $buttoncolor;
+
+                a{
+                    color: white;
+                    text-decoration: none;
+                    font-size: 15px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+// Header Ends Here
+
+// Home Starts Here
+.home{
+    width: 100%;
+
+    .content{
+        width: 70%;
+        margin: 0 auto;
+        @include flex();
+
+        .title{
+            width: 64%;
+            margin:40px auto;
+            text-align: center;
+
+            h1{
+                color: $color;
+                font-size: 77px;
+                letter-spacing: -5px;
+                line-height: 86px;
+            }
+
+            h3{
+                width: 70%;
+                margin: 40px auto 0 auto;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 35px;
+                letter-spacing: 0.4px;
+            }
+            
+            svg{
+                width: 20%;
+                position: relative;
+                left: 6%;
+                fill: (#FF385C);
+                text-align: right;
+                font-size: 10px;
+            }
+        }
+
+        .gallary{
+            width:85%;
+            height: 600px;
+            margin: 0 auto 50px auto;
+
+            @include flex();
+
+            .left{
+                width: 22%;
+                margin: auto 0;
+                
+                img{
+                    width: 180%;
+                    border-radius: 8px;
+                    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px;
+                }
+            }
+
+            .right{
+                width: 22%;
+                margin: auto 0;
+
+                img{
+                    width: 180%;
+                    border-radius: 8px;
+                    margin-left: -80%;
+                    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px;
+                }
+            }
+            .center{
+                width: 55%;
+                margin: 0 auto;
+                border-radius: 8px;
+                
+                video{
+                    width: 100%;
+                    border-radius: 8px;
+                    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px;
+                   
+                }
+            }
+        }
+
+        .description{
+            width: 90%;
+            background-color: white;
+            @include flex();
+            text-align: center;
+            margin:50px auto;
+            
+            .box{
+                width: 45%;
+
+                h4{
+                    line-height:28px;
+                    font-weight: 600;
+                }
+                
+                h6{
+                    font-weight: 600;
+                    line-height: 20px;
+                    font-size: 12px;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+// Home Ends Here
+
+// How it works Starts Here
+.howitworks{
+    width: 100%;
+    background-color: #F8F8F8;
+
+    .content{
+        width:70%;
+        margin:0 auto;
+        padding:80px 0;
+        @include flex();
+
+        .title{
+            width: 100%;
+            margin: 60px 0;
+
+            h1{
+                font-size: 43px;
+                text-align: center;
+                letter-spacing:-2px;
+                color: #11272E;
+            }
+        }
+
+        .sec{
+            width: 100%;
+            @include flex();
+            margin-bottom: 90px;
+
+            .left{
+                width: 47%;
+                margin:auto 0;
+                
+                img{
+                    width: 100%;
+                    border-radius: 10px;
+                    box-shadow:  0 9px 14px rgba(0,0,0,.04), 10px 10px 44px rgba(0,0,0,.1);;
+                    transform: rotate(-1deg);
+                }
+
+                video{
+                    width: 100%;
+                    border-radius: 10px;
+                    box-shadow:  0 9px 14px rgba(0,0,0,.04), 10px 10px 44px rgba(0,0,0,.1);;
+                    transform: rotate(-1deg);
+                }
+
+                h2{
+                    font-size: 26px;
+                }
+
+                p{
+                    line-height: 30px;
+                    margin: 20px 0;
+                }
+            }
+
+            .right{
+                width:45%;
+                margin:auto 0;
+
+                img{
+                    width: 100%;
+                    border-radius: 10px;
+                    box-shadow:  0 9px 14px rgba(0,0,0,.04), 10px 10px 44px rgba(0,0,0,.1);;
+                    transform: rotate(1deg);
+                }
+
+                h2{
+                    font-size: 26px;
+                }
+
+                p{
+                    line-height: 30px;
+                    margin: 20px 0;
+                }
+            }
+        }
+        
+        .svg-arrow1{
+            width: 100%;
+            svg{
+                width: 100%;
+                transform: scaleX(-1);
+            }
+        }
+
+        .svg-arrow2{
+            width: 100%;
+            svg{
+                width: 100%;
+                transform: scaleX(1);
+            }
+        }
+
+        .description{
+            width: 50%;
+            margin:40px auto 80px auto;
+            
+            h4{
+                line-height: 25px;
+                text-align: center;
+                font-size:15.1px;
+            }
+        }
+    }
+}
+// How it works Ends Here
+
+// Video Examples Starts Here
+.examples{
+    width:100%;
+    background-color:#11272E;
+
+    .content{
+        width: 71.4%;
+        margin: 0 auto;
+        @include flex();
+        padding:10px 0 ;
+
+        .title{
+            width: 50%;
+            margin: 56px auto 0 auto;
+            text-align: center;
+
+            h1{
+                color: white;
+                font-size:42px;
+            }
+
+            h2{
+                color: #B7BEC0;
+                font-size: 21px;
+                margin: 35px auto;
+                line-height: 34px;
+            }
+        }
+
+        .gallary{
+            width: 100%;
+            @include flex();
+
+            .sec{
+                width: 31.5%;
+                margin: 15px 0;
+
+                video{
+                    width: 100%;
+                    border-radius: 8px;
+                }
+            }
+        }
+
+        .description{
+            width: 50%;
+            margin: 40px auto;
+            text-align: center;
+
+            h4{
+                color: #B7BEC0;
+                line-height: 25px;
+                font-size: 15px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+// Video Examples Ends Here
+
+// Pricing Starts Here
+.pricing{
+    width: 100%;
+
+    .content{
+        width: 59%;
+        margin: 0 auto;
+        @include flex();
+        padding: 90px 0;
+
+        .title{
+            width: 100%;
+            text-align: center;
+            margin: 50px 0;
+
+            h1{
+                font-size: 40px;
+                color: $color;
+            }
+
+            h3{
+                margin: 22px auto;
+                font-size: 21px;
+            }
+
+            i{
+                font-weight: 500;
+            }
+        }
+
+        .cards{
+            width: 92%;
+            margin: 0 auto;
+            @include flex();
+
+            .box{
+                width:49.2%;
+                text-align: center;
+                border-radius: 7px;
+                box-shadow:  0 9px 14px rgba(0,0,0,.04), 10px 10px 44px rgba(0,0,0,.1);;
+                padding-top: 38px;
+                .samemargin{
+                    margin: 20px auto;
+                }
+
+                h2{
+                    font-size: 19px;
+                    font-weight: 600;
+                    color: $color;
+                }
+
+                h1{
+                    font-size: 42px;
+                    color: $color;
+                }
+
+                i{
+                    font-size: 13px;
+                }
+
+                h3{
+                    font-size:16px;
+                }
+
+                button{
+                    width:86%;
+                    height: 55px;
+                    color: white;
+                    background-color: $buttoncolor;
+                    border: none;
+                    border-radius: 3px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    margin: 34px 0 30px 0;
+                }
+            }
+        }
+
+        .description{
+            width: 40%;
+            margin:100px auto;
+            text-align: center;
+            @include flex();
+
+            span{
+                width: 70%;
+                margin: auto 0;
+            }
+
+            a{
+                width: 30%;
+                button{
+                    width:150px;
+                    height: 50px;
+                    border: 2px solid $buttoncolor;
+                    border-radius:4px;
+                    background-color: white;
+                    color: $buttoncolor;
+                    font-size: 15px;
+                    font-weight: 500;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+// Pricing Ends Here
+
+// Faqs starts  Here
+.faqs{
+    width: 100%;
+    background-color: #F8F8F8;
+
+    .content{
+        width: 71.7%;
+        margin: 0 auto;
+        @include flex();
+        padding: 150px 0;
+
+        .title{
+            width: 30%;
+            text-align: left;
+
+            h1{
+                font-size: 40px;
+                color: $color;
+                margin-bottom:40px;
+            }
+        }
+
+        .text{
+            width: 100%;
+            @include flex();
+
+            .box{
+                width: 47%;
+                margin:0 0 15px 0;
+
+                h3{
+                    color: $color;
+                }
+
+                h4{
+                    font-size: 15px;
+                    margin: 22px 0;
+                    line-height: 28px;
+                    text-align: justify;
+
+                    a{
+                        color: $buttoncolor;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+// Faqs ends Here
+
+// Footer Starts Here
+footer{
+    width:100%;
+
+    .content{
+        width: 33%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 85px 0;
+
+        h1{
+            font-size: 25px;
+            color: $color;
+            margin: 18px 0;
+        }
+        
+        .buttonlink{
+            
+            button{
+                width:33% ;
+                height: 55px;
+                color: white;
+                background-color: $buttoncolor;
+                border: none;
+                border-radius: 3px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+
+        .svg1{
+            margin: 35px auto 80px auto;
+        }
+
+        .link{
+            margin: 22px auto;
+        }
+    }
+}
+// Footer ends Here
+
+@media (max-width:1600px){
+    header{
+        nav{
+            width: 70.4%;
+
+            .brand{
+                width:54%;
+            }
+
+            ul{
+                width: 30%;
+
+                li{
+                    a{
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            .booking-slot{
+                width: 8.5%;
+                
+                button{
+                    width: 100%;
+
+                    a{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    
+    .home{
+        .content{
+            .title{
+                width: 74%;
+
+                h1{
+                    font-size: 78px;
+                }
+            }
+        }
+    }
+}
+
+// Code ends here 

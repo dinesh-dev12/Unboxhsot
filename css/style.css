@@ -1,0 +1,536 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "medium-font", sans-serif;
+}
+
+@font-face {
+  font-family: medium-font;
+  src: url("../Assets/fonts/ITC Avant Garde Gothic Medium.otf");
+}
+@font-face {
+  font-family: bold-font;
+  src: url("../Assets/fonts/ITC Avant Garde Gothic Bold.otf");
+}
+button {
+  font-family: "medium-font", sans-serif;
+}
+
+.textwithbold {
+  font-family: bold-font;
+}
+
+.samecolortext {
+  color: #587083;
+  font-weight: 500;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  z-index: 10;
+}
+header nav {
+  width: 71.4%;
+  height: 100%;
+  margin: auto auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+header nav .brand {
+  width: 60%;
+  margin: auto 0;
+}
+header nav ul {
+  width: 24.6%;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto 0;
+}
+header nav ul li a {
+  color: #587083;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 16.3px;
+  margin: 0 auto;
+  letter-spacing: -0.1px;
+}
+header nav .booking-slot {
+  width: 7.6%;
+  margin: auto 0;
+  text-align: left;
+}
+header nav .booking-slot button {
+  width: 92%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #FF385C;
+}
+header nav .booking-slot button a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.home {
+  width: 100%;
+}
+.home .content {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.home .content .title {
+  width: 64%;
+  margin: 40px auto;
+  text-align: center;
+}
+.home .content .title h1 {
+  color: #11272E;
+  font-size: 77px;
+  letter-spacing: -5px;
+  line-height: 86px;
+}
+.home .content .title h3 {
+  width: 70%;
+  margin: 40px auto 0 auto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 35px;
+  letter-spacing: 0.4px;
+}
+.home .content .title svg {
+  width: 20%;
+  position: relative;
+  left: 6%;
+  fill: #FF385C;
+  text-align: right;
+  font-size: 10px;
+}
+.home .content .gallary {
+  width: 85%;
+  height: 600px;
+  margin: 0 auto 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.home .content .gallary .left {
+  width: 22%;
+  margin: auto 0;
+}
+.home .content .gallary .left img {
+  width: 180%;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.home .content .gallary .right {
+  width: 22%;
+  margin: auto 0;
+}
+.home .content .gallary .right img {
+  width: 180%;
+  border-radius: 8px;
+  margin-left: -80%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.home .content .gallary .center {
+  width: 55%;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+.home .content .gallary .center video {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.home .content .description {
+  width: 90%;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  margin: 50px auto;
+}
+.home .content .description .box {
+  width: 45%;
+}
+.home .content .description .box h4 {
+  line-height: 28px;
+  font-weight: 600;
+}
+.home .content .description .box h6 {
+  font-weight: 600;
+  line-height: 20px;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.howitworks {
+  width: 100%;
+  background-color: #F8F8F8;
+}
+.howitworks .content {
+  width: 70%;
+  margin: 0 auto;
+  padding: 80px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.howitworks .content .title {
+  width: 100%;
+  margin: 60px 0;
+}
+.howitworks .content .title h1 {
+  font-size: 43px;
+  text-align: center;
+  letter-spacing: -2px;
+  color: #11272E;
+}
+.howitworks .content .sec {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 90px;
+}
+.howitworks .content .sec .left {
+  width: 47%;
+  margin: auto 0;
+}
+.howitworks .content .sec .left img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 9px 14px rgba(0, 0, 0, 0.04), 10px 10px 44px rgba(0, 0, 0, 0.1);
+  transform: rotate(-1deg);
+}
+.howitworks .content .sec .left video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 9px 14px rgba(0, 0, 0, 0.04), 10px 10px 44px rgba(0, 0, 0, 0.1);
+  transform: rotate(-1deg);
+}
+.howitworks .content .sec .left h2 {
+  font-size: 26px;
+}
+.howitworks .content .sec .left p {
+  line-height: 30px;
+  margin: 20px 0;
+}
+.howitworks .content .sec .right {
+  width: 45%;
+  margin: auto 0;
+}
+.howitworks .content .sec .right img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 9px 14px rgba(0, 0, 0, 0.04), 10px 10px 44px rgba(0, 0, 0, 0.1);
+  transform: rotate(1deg);
+}
+.howitworks .content .sec .right h2 {
+  font-size: 26px;
+}
+.howitworks .content .sec .right p {
+  line-height: 30px;
+  margin: 20px 0;
+}
+.howitworks .content .svg-arrow1 {
+  width: 100%;
+}
+.howitworks .content .svg-arrow1 svg {
+  width: 100%;
+  transform: scaleX(-1);
+}
+.howitworks .content .svg-arrow2 {
+  width: 100%;
+}
+.howitworks .content .svg-arrow2 svg {
+  width: 100%;
+  transform: scaleX(1);
+}
+.howitworks .content .description {
+  width: 50%;
+  margin: 40px auto 80px auto;
+}
+.howitworks .content .description h4 {
+  line-height: 25px;
+  text-align: center;
+  font-size: 15.1px;
+}
+
+.examples {
+  width: 100%;
+  background-color: #11272E;
+}
+.examples .content {
+  width: 71.4%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.examples .content .title {
+  width: 50%;
+  margin: 56px auto 0 auto;
+  text-align: center;
+}
+.examples .content .title h1 {
+  color: white;
+  font-size: 42px;
+}
+.examples .content .title h2 {
+  color: #B7BEC0;
+  font-size: 21px;
+  margin: 35px auto;
+  line-height: 34px;
+}
+.examples .content .gallary {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.examples .content .gallary .sec {
+  width: 31.5%;
+  margin: 15px 0;
+}
+.examples .content .gallary .sec video {
+  width: 100%;
+  border-radius: 8px;
+}
+.examples .content .description {
+  width: 50%;
+  margin: 40px auto;
+  text-align: center;
+}
+.examples .content .description h4 {
+  color: #B7BEC0;
+  line-height: 25px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.pricing {
+  width: 100%;
+}
+.pricing .content {
+  width: 59%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 90px 0;
+}
+.pricing .content .title {
+  width: 100%;
+  text-align: center;
+  margin: 50px 0;
+}
+.pricing .content .title h1 {
+  font-size: 40px;
+  color: #11272E;
+}
+.pricing .content .title h3 {
+  margin: 22px auto;
+  font-size: 21px;
+}
+.pricing .content .title i {
+  font-weight: 500;
+}
+.pricing .content .cards {
+  width: 92%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.pricing .content .cards .box {
+  width: 49.2%;
+  text-align: center;
+  border-radius: 7px;
+  box-shadow: 0 9px 14px rgba(0, 0, 0, 0.04), 10px 10px 44px rgba(0, 0, 0, 0.1);
+  padding-top: 38px;
+}
+.pricing .content .cards .box .samemargin {
+  margin: 20px auto;
+}
+.pricing .content .cards .box h2 {
+  font-size: 19px;
+  font-weight: 600;
+  color: #11272E;
+}
+.pricing .content .cards .box h1 {
+  font-size: 42px;
+  color: #11272E;
+}
+.pricing .content .cards .box i {
+  font-size: 13px;
+}
+.pricing .content .cards .box h3 {
+  font-size: 16px;
+}
+.pricing .content .cards .box button {
+  width: 86%;
+  height: 55px;
+  color: white;
+  background-color: #FF385C;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 34px 0 30px 0;
+}
+.pricing .content .description {
+  width: 40%;
+  margin: 100px auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.pricing .content .description span {
+  width: 70%;
+  margin: auto 0;
+}
+.pricing .content .description a {
+  width: 30%;
+}
+.pricing .content .description a button {
+  width: 150px;
+  height: 50px;
+  border: 2px solid #FF385C;
+  border-radius: 4px;
+  background-color: white;
+  color: #FF385C;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.faqs {
+  width: 100%;
+  background-color: #F8F8F8;
+}
+.faqs .content {
+  width: 71.7%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 150px 0;
+}
+.faqs .content .title {
+  width: 30%;
+  text-align: left;
+}
+.faqs .content .title h1 {
+  font-size: 40px;
+  color: #11272E;
+  margin-bottom: 40px;
+}
+.faqs .content .text {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.faqs .content .text .box {
+  width: 47%;
+  margin: 0 0 15px 0;
+}
+.faqs .content .text .box h3 {
+  color: #11272E;
+}
+.faqs .content .text .box h4 {
+  font-size: 15px;
+  margin: 22px 0;
+  line-height: 28px;
+  text-align: justify;
+}
+.faqs .content .text .box h4 a {
+  color: #FF385C;
+  text-decoration: none;
+}
+
+footer {
+  width: 100%;
+}
+footer .content {
+  width: 33%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 85px 0;
+}
+footer .content h1 {
+  font-size: 25px;
+  color: #11272E;
+  margin: 18px 0;
+}
+footer .content .buttonlink button {
+  width: 33%;
+  height: 55px;
+  color: white;
+  background-color: #FF385C;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
+footer .content .svg1 {
+  margin: 35px auto 80px auto;
+}
+footer .content .link {
+  margin: 22px auto;
+}
+
+@media (max-width: 1600px) {
+  header nav {
+    width: 70.4%;
+  }
+  header nav .brand {
+    width: 54%;
+  }
+  header nav ul {
+    width: 30%;
+  }
+  header nav ul li a {
+    font-size: 15px;
+  }
+  header nav .booking-slot {
+    width: 8.5%;
+  }
+  header nav .booking-slot button {
+    width: 100%;
+  }
+  header nav .booking-slot button a {
+    font-size: 16px;
+  }
+
+  .home .content .title {
+    width: 74%;
+  }
+  .home .content .title h1 {
+    font-size: 78px;
+  }
+}/*# sourceMappingURL=style.css.map */
