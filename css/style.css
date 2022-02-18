@@ -42,7 +42,7 @@ header {
   z-index: 10;
 }
 header nav {
-  width: 71.4%;
+  max-width: 71.4%;
   height: 100%;
   margin: auto auto;
   display: flex;
@@ -65,7 +65,7 @@ header nav ul li a {
   color: #587083;
   font-weight: 500;
   text-decoration: none;
-  font-size: 16.3px;
+  font-size: 15px;
   margin: 0 auto;
   letter-spacing: -0.1px;
 }
@@ -75,10 +75,10 @@ header nav .booking-slot {
   text-align: left;
 }
 header nav .booking-slot button {
-  width: 92%;
+  width: 90px;
   height: 40px;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   background-color: #FF385C;
 }
 header nav .booking-slot button a {
@@ -504,9 +504,14 @@ footer .content .link {
   margin: 22px auto;
 }
 
+@media (max-width: 1880px) {
+  header nav {
+    min-width: 1370px;
+  }
+}
 @media (max-width: 1600px) {
   header nav {
-    width: 70.4%;
+    min-width: 1128px;
   }
   header nav .brand {
     width: 54%;
@@ -532,5 +537,54 @@ footer .content .link {
   }
   .home .content .title h1 {
     font-size: 78px;
+  }
+}
+@media (max-width: 1252px) {
+  header nav {
+    min-width: 90%;
+  }
+  header nav .brand {
+    width: 15%;
+    margin-right: auto;
+  }
+  header nav ul {
+    min-width: 330px;
+  }
+  header nav ul li a {
+    font-size: 15px;
+  }
+  header nav .booking-slot {
+    min-width: 8.5%;
+    margin-left: 3.5%;
+  }
+  header nav .booking-slot button a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 961px) {
+  header nav {
+    min-width: 680px;
+  }
+  header nav .brand {
+    margin-right: 0;
+  }
+  header nav ul {
+    display: none;
+  }
+  header nav .booking-slot {
+    width: 90px;
+  }
+}
+@media (max-width: 755px) {
+  header nav {
+    min-width: 90%;
+  }
+}
+@media (max-width: 740px) {
+  header {
+    margin-top: -18px;
+  }
+  header nav .booking-slot {
+    width: 86px;
   }
 }/*# sourceMappingURL=style.css.map */
