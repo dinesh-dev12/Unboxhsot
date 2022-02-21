@@ -15,7 +15,7 @@ html{
 
 body{
     font-family: 'medium-font', sans-serif;
-    // background-color: black;
+    background-color: grey;
 }
 
 @mixin flex{
@@ -49,14 +49,6 @@ button{
     font-weight: 500;
 }
 
-// header{
-//     .inner{
-//         max-width:71.4%;
-//         margin: 0 auto;
-//     }
-// }
-
-// Header Starts Here
 header{
     width: 100%;
     height: 100px;
@@ -82,6 +74,7 @@ header{
             margin: auto 0;
             
             li{
+                padding-bottom:8px;
                a{
                     color: #587083;
                     font-weight:500;
@@ -97,9 +90,10 @@ header{
             width: 7.6%;
             margin: auto 0;
             text-align:left;
+            padding-bottom:8px;
             
             button{
-                width:90px;
+                width:92px;
                 height: 40px;
                 border: none;
                 border-radius:4px;
@@ -127,7 +121,7 @@ header{
         @include flex();
 
         .title{
-            width: 64%;
+            width:65%;
             margin:40px auto;
             text-align: center;
 
@@ -158,57 +152,47 @@ header{
         }
 
         .gallary{
-            width:85%;
-            height: 600px;
-            margin: 0 auto 50px auto;
-
+            width: 80%;
+            margin:150px auto ;
             @include flex();
-
-            .left{
-                width: 22%;
-                margin: auto 0;
+            
+            .box{
+                width: 33%;
+                text-align: center;
                 
                 img{
-                    width: 180%;
+                    width: 100%;
+                    transform: scale(1.2);
                     border-radius: 8px;
                     box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px;
                 }
+
+                video{
+                    width:100%;
+                    transform: scale(1.7);
+                    border-radius: 4px;
+                    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px;
+                }
+            }
+
+            .center{
+                margin:auto 0;
             }
 
             .right{
-                width: 22%;
-                margin: auto 0;
-
-                img{
-                    width: 180%;
-                    border-radius: 8px;
-                    margin-left: -80%;
-                    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px;
-                }
-            }
-            .center{
-                width: 55%;
-                margin: 0 auto;
-                border-radius: 8px;
-                
-                video{
-                    width: 100%;
-                    border-radius: 8px;
-                    box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px;
-                   
-                }
+                z-index: -100;
             }
         }
-
+        
         .description{
-            width: 90%;
+            width:80%;
             background-color: white;
             @include flex();
             text-align: center;
             margin:50px auto;
             
             .box{
-                width: 45%;
+                width:48%;
 
                 h4{
                     line-height:28px;
@@ -595,10 +579,25 @@ footer{
 }
 // Footer ends Here
 
+//Media Query Starts Here
+//Media Query Starts Here
+
 @media(max-width:1880px){
     header{
         nav{
             min-width:1370px;
+        }
+    }
+
+    .home{
+        .content{
+            .gallary{
+                min-width:1052px;
+            }
+
+            .description{
+                min-width: 1052px;
+            }
         }
     }
 }
@@ -606,7 +605,6 @@ footer{
     header{
         nav{
             min-width:1128px;
-            // background-color: grey;
 
             .brand{
                 width:54%;
@@ -624,6 +622,7 @@ footer{
 
             .booking-slot{
                 width: 8.5%;
+                margin-left: 3%;
                 
                 button{
                     width: 100%;
@@ -635,18 +634,21 @@ footer{
             }
         }
     }
-    
+
     .home{
         .content{
+            width: 961px;
             .title{
-                width: 74%;
-
-                h1{
-                    font-size: 78px;
-                }
+                min-width:842px;
+            }
+            .gallary{
+                min-width:991px;
+                margin:150px auto;
+                
             }
         }
     }
+    
 }
 
 @media(max-width:1252px){
@@ -660,7 +662,7 @@ footer{
             }
 
             ul{
-                min-width:330px;
+                min-width:338px;
                 li{
                     a{
                         font-size: 15px;
@@ -670,7 +672,7 @@ footer{
 
             .booking-slot{
                 min-width:8.5%;
-                margin-left:3.5% ;
+                margin-left:5.5% ;
                 
                 button{
 
@@ -691,12 +693,32 @@ footer{
             .brand{
                 margin-right: 0;
             }
+
             ul{
                 display: none;
             }
 
             .booking-slot{
                 width: 90px;
+            }
+        }
+    }
+
+    .home{
+        // width: 100%;
+        .content{
+            width: 740px;
+            // width: 70%;
+        
+            .title{
+                min-width:680px;
+                margin: 0 auto;
+
+
+                h1{
+                    width: 100%;
+                    font-size: 65px;
+                }
             }
         }
     }
@@ -716,11 +738,86 @@ footer{
 
         nav{
             .booking-slot{
-                width: 86px;
+                padding-bottom:5px;
+                
+                button{
+                    width: 87px;
+                    height: 37px;
+                    
+                }
+            }
+        }
+    }
+
+    .home{
+        .content{
+            width:600px;
+            margin: 0 auto ;
+        
+            .title{
+                min-width:600px;
+                h1{
+                    font-size: 50px;
+                    line-height: 60px;
+                }
+
+                h3{
+                    width: 100%;
+                }
             }
         }
     }
 }
+
+@media(max-width:600px){
+    .home{
+        .content{
+            width: 500px;
+
+            .title{
+                min-width: 500px;
+
+                h3{
+                    font-size: 17px;
+                    margin-top:10px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:500px){
+    .home{
+        .content{
+            width: 350px;
+
+            .title{
+                min-width:350px;
+
+                h1{
+                    font-size:45px;
+                    letter-spacing: -1px;
+                    line-height: 50px;
+                }
+
+                h3{
+                    font-size:20px;
+                    line-height: 30px;
+                    margin-top:25px;
+                }
+
+                svg{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+//Media Query Ends Here
+//Media Query Ends Here
+
+// ................./................
 // Code ends here 
 
 
