@@ -10,7 +10,6 @@ html {
 
 body {
   font-family: "medium-font", sans-serif;
-  background-color: grey;
 }
 
 @font-face {
@@ -603,7 +602,8 @@ footer .content .link {
 }
 @media (max-width: 740px) {
   header {
-    margin-top: -18px;
+    position: relative;
+    top: -17px;
   }
   header nav .booking-slot {
     padding-bottom: 5px;
@@ -646,6 +646,7 @@ footer .content .link {
   }
   .home .content .title {
     min-width: 350px;
+    margin-top: -10px;
   }
   .home .content .title h1 {
     font-size: 45px;

@@ -15,7 +15,7 @@ html{
 
 body{
     font-family: 'medium-font', sans-serif;
-    background-color: grey;
+    // background-color: grey;
 }
 
 @mixin flex{
@@ -734,7 +734,8 @@ footer{
 
 @media(max-width:740px){
     header{
-        margin-top: -18px;
+        position: relative;
+        top: -17px;
 
         nav{
             .booking-slot{
@@ -793,11 +794,13 @@ footer{
 
             .title{
                 min-width:350px;
+                margin-top: -10px;
 
                 h1{
                     font-size:45px;
                     letter-spacing: -1px;
                     line-height: 50px;
+
                 }
 
                 h3{
