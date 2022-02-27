@@ -39,7 +39,7 @@ button{
 
 // Custom class for the bold text 
 .textwithbold{
-    font-family: bold-font;
+    font-family:'bold-font',sans-serif;
 }
 
 // Custom class for the Same Color  text 
@@ -120,11 +120,12 @@ header{
         @include flex();
 
         .title{
-            width:65%;
+            max-width:65%;
             margin:40px auto;
             text-align: center;
 
             h1{
+                width: 97%;
                 color: $color;
                 font-size: 77px;
                 letter-spacing: -5px;
@@ -132,12 +133,13 @@ header{
             }
 
             h3{
-                width: 70%;
+                width: 68%;
                 margin: 40px auto 0 auto;
                 font-size: 20px;
                 font-weight: 500;
                 line-height: 35px;
                 letter-spacing: 0.4px;
+                font-family:'medium-font';
             }
             
             svg{
@@ -151,51 +153,52 @@ header{
         }
 
         .gallary{
-            width: 80%;
-            margin:150px auto ;
+            width:80%;
             @include flex();
-            
-            .box{
-                width: 33%;
-                text-align: center;
-                
+            margin: 140px auto;
+            text-align: center;
+
+            .left,.right{
+                width:35%;
+
                 img{
                     width: 100%;
                     transform: scale(1.2);
                     border-radius: 8px;
                     box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px;
                 }
+            }
+
+            .center{
+                width:30%;
+                margin: auto 0;
 
                 video{
-                    width:100%;
-                    transform: scale(1.7);
+                    width: 100%;
+                    transform: scale(2);
                     border-radius: 4px;
                     box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px;
                 }
             }
 
-            .center{
-                margin:auto 0;
-            }
-
             .right{
-                z-index: -100;
+                z-index: -20;
             }
         }
-        
+       
         .description{
-            width:80%;
+            max-width:95%;
             background-color: white;
             @include flex();
             text-align: center;
             margin:50px auto;
             
             .box{
-                width:48%;
+                width:46%;
 
                 h4{
                     line-height:28px;
-                    font-weight: 600;
+                    font-weight: 400;
                 }
                 
                 h6{
@@ -587,19 +590,22 @@ footer{
             min-width:1370px;
         }
     }
+}
 
+@media(max-width:1696px){
     .home{
         .content{
-            .gallary{
-                min-width:1052px;
-            }
-
-            .description{
-                min-width: 1052px;
+            .title{
+                min-width: 842px;
+                
+                h1{
+                    width: 100%;
+                }
             }
         }
     }
 }
+
 @media (max-width:1600px){
     header{
         nav{
@@ -633,21 +639,6 @@ footer{
             }
         }
     }
-
-    .home{
-        .content{
-            width: 961px;
-            .title{
-                min-width:842px;
-            }
-            .gallary{
-                min-width:991px;
-                margin:150px auto;
-                
-            }
-        }
-    }
-    
 }
 
 @media(max-width:1252px){
@@ -682,6 +673,15 @@ footer{
             }
         }
     }
+
+    .home{
+        .content{
+            width:100%;
+            .title{
+                width:100%;            
+            }
+        }
+    }
 }
 
 @media(max-width:961px){
@@ -702,21 +702,49 @@ footer{
             }
         }
     }
-
+    
     .home{
-        // width: 100%;
         .content{
-            width: 740px;
-            // width: 70%;
-        
             .title{
-                min-width:680px;
-                margin: 0 auto;
-
-
+                margin:30px auto;
+                // background-color: bisque;
+                text-align: center;
+                
                 h1{
-                    width: 100%;
-                    font-size: 65px;
+                    width:80%;
+                    font-size: 70px;
+                    line-height:80px;
+                    margin: 0 auto;
+                    
+                }
+
+                h3{
+                    width:60%;
+                }
+            }
+            
+            .gallary{
+                width:90%;
+            }
+        }
+    }
+}
+
+@media(max-width:840px){
+    .home{
+        .content{
+            .title{
+                min-width:90%;
+                text-align: center;
+                
+                h1{
+                    width:100%;
+                    // margin: 0;
+                }
+
+                h3{
+                    width:85%;
+                    // margin: 0;
                 }
             }
         }
@@ -750,18 +778,40 @@ footer{
 
     .home{
         .content{
-            width:600px;
-            margin: 0 auto ;
-        
+            margin-top: 0;
             .title{
-                min-width:600px;
+                margin-top:-20px;
                 h1{
                     font-size: 50px;
-                    line-height: 60px;
+                    line-height:55px;
                 }
 
                 h3{
                     width: 100%;
+                    font-size:19px;
+                }
+
+                svg{
+                    display: none;
+                }
+            }
+            
+            .gallary{
+                margin:50px auto;
+                .center{
+                    video{
+                        transform: scale(2.1);
+                    }
+                }
+            }
+
+            .description{
+                width: 75%;
+                margin: 75px auto;
+
+                .left,.right{
+                    width: 100%;
+                    margin-bottom: 30px;
                 }
             }
         }
@@ -771,11 +821,8 @@ footer{
 @media(max-width:600px){
     .home{
         .content{
-            width: 500px;
-
             .title{
-                min-width: 500px;
-
+                
                 h3{
                     font-size: 17px;
                     margin-top:10px;
@@ -788,27 +835,20 @@ footer{
 @media(max-width:500px){
     .home{
         .content{
-            width: 350px;
-
             .title{
-                min-width:350px;
-                margin-top: -10px;
-
                 h1{
                     font-size:45px;
                     letter-spacing: -1px;
                     line-height: 50px;
+                    font-weight: 700;
+                    font-family:'bold-font';
 
                 }
 
                 h3{
-                    font-size:20px;
+                    font-size:18px;
                     line-height: 30px;
                     margin-top:25px;
-                }
-
-                svg{
-                    display: none;
                 }
             }
         }

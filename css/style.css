@@ -25,7 +25,7 @@ button {
 }
 
 .textwithbold {
-  font-family: bold-font;
+  font-family: "bold-font", sans-serif;
 }
 
 .samecolortext {
@@ -103,23 +103,25 @@ header nav .booking-slot button a {
   justify-content: space-between;
 }
 .home .content .title {
-  width: 65%;
+  max-width: 65%;
   margin: 40px auto;
   text-align: center;
 }
 .home .content .title h1 {
+  width: 97%;
   color: #11272E;
   font-size: 77px;
   letter-spacing: -5px;
   line-height: 86px;
 }
 .home .content .title h3 {
-  width: 70%;
+  width: 68%;
   margin: 40px auto 0 auto;
   font-size: 20px;
   font-weight: 500;
   line-height: 35px;
   letter-spacing: 0.4px;
+  font-family: "medium-font";
 }
 .home .content .title svg {
   width: 20%;
@@ -131,35 +133,36 @@ header nav .booking-slot button a {
 }
 .home .content .gallary {
   width: 80%;
-  margin: 150px auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-.home .content .gallary .box {
-  width: 33%;
+  margin: 140px auto;
   text-align: center;
 }
-.home .content .gallary .box img {
+.home .content .gallary .left, .home .content .gallary .right {
+  width: 35%;
+}
+.home .content .gallary .left img, .home .content .gallary .right img {
   width: 100%;
   transform: scale(1.2);
   border-radius: 8px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
-.home .content .gallary .box video {
+.home .content .gallary .center {
+  width: 30%;
+  margin: auto 0;
+}
+.home .content .gallary .center video {
   width: 100%;
-  transform: scale(1.7);
+  transform: scale(2);
   border-radius: 4px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
-.home .content .gallary .center {
-  margin: auto 0;
-}
 .home .content .gallary .right {
-  z-index: -100;
+  z-index: -20;
 }
 .home .content .description {
-  width: 80%;
+  max-width: 95%;
   background-color: white;
   display: flex;
   flex-wrap: wrap;
@@ -168,11 +171,11 @@ header nav .booking-slot button a {
   margin: 50px auto;
 }
 .home .content .description .box {
-  width: 48%;
+  width: 46%;
 }
 .home .content .description .box h4 {
   line-height: 28px;
-  font-weight: 600;
+  font-weight: 400;
 }
 .home .content .description .box h6 {
   font-weight: 600;
@@ -504,12 +507,13 @@ footer .content .link {
   header nav {
     min-width: 1370px;
   }
-
-  .home .content .gallary {
-    min-width: 1052px;
+}
+@media (max-width: 1696px) {
+  .home .content .title {
+    min-width: 842px;
   }
-  .home .content .description {
-    min-width: 1052px;
+  .home .content .title h1 {
+    width: 100%;
   }
 }
 @media (max-width: 1600px) {
@@ -535,17 +539,6 @@ footer .content .link {
   header nav .booking-slot button a {
     font-size: 16px;
   }
-
-  .home .content {
-    width: 961px;
-  }
-  .home .content .title {
-    min-width: 842px;
-  }
-  .home .content .gallary {
-    min-width: 991px;
-    margin: 150px auto;
-  }
 }
 @media (max-width: 1252px) {
   header nav {
@@ -568,6 +561,13 @@ footer .content .link {
   header nav .booking-slot button a {
     font-size: 16px;
   }
+
+  .home .content {
+    width: 100%;
+  }
+  .home .content .title {
+    width: 100%;
+  }
 }
 @media (max-width: 961px) {
   header nav {
@@ -583,16 +583,33 @@ footer .content .link {
     width: 90px;
   }
 
-  .home .content {
-    width: 740px;
-  }
   .home .content .title {
-    min-width: 680px;
+    margin: 30px auto;
+    text-align: center;
+  }
+  .home .content .title h1 {
+    width: 80%;
+    font-size: 70px;
+    line-height: 80px;
     margin: 0 auto;
+  }
+  .home .content .title h3 {
+    width: 60%;
+  }
+  .home .content .gallary {
+    width: 90%;
+  }
+}
+@media (max-width: 840px) {
+  .home .content .title {
+    min-width: 90%;
+    text-align: center;
   }
   .home .content .title h1 {
     width: 100%;
-    font-size: 65px;
+  }
+  .home .content .title h3 {
+    width: 85%;
   }
 }
 @media (max-width: 755px) {
@@ -614,51 +631,54 @@ footer .content .link {
   }
 
   .home .content {
-    width: 600px;
-    margin: 0 auto;
+    margin-top: 0;
   }
   .home .content .title {
-    min-width: 600px;
+    margin-top: -20px;
   }
   .home .content .title h1 {
     font-size: 50px;
-    line-height: 60px;
+    line-height: 55px;
   }
   .home .content .title h3 {
     width: 100%;
+    font-size: 19px;
+  }
+  .home .content .title svg {
+    display: none;
+  }
+  .home .content .gallary {
+    margin: 50px auto;
+  }
+  .home .content .gallary .center video {
+    transform: scale(2.1);
+  }
+  .home .content .description {
+    width: 75%;
+    margin: 75px auto;
+  }
+  .home .content .description .left, .home .content .description .right {
+    width: 100%;
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 600px) {
-  .home .content {
-    width: 500px;
-  }
-  .home .content .title {
-    min-width: 500px;
-  }
   .home .content .title h3 {
     font-size: 17px;
     margin-top: 10px;
   }
 }
 @media (max-width: 500px) {
-  .home .content {
-    width: 350px;
-  }
-  .home .content .title {
-    min-width: 350px;
-    margin-top: -10px;
-  }
   .home .content .title h1 {
     font-size: 45px;
     letter-spacing: -1px;
     line-height: 50px;
+    font-weight: 700;
+    font-family: "bold-font";
   }
   .home .content .title h3 {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
     margin-top: 25px;
-  }
-  .home .content .title svg {
-    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
