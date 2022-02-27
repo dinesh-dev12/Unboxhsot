@@ -158,6 +158,9 @@ header nav .booking-slot button a {
   border-radius: 4px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
+.home .content .gallary .right {
+  z-index: -20;
+}
 .home .content .description {
   max-width: 95%;
   background-color: white;
