@@ -328,12 +328,13 @@ header{
 .examples{
     width:100%;
     background-color:#11272E;
+    padding:80px 0;
 
     .content{
-        width: 71.4%;
+        width: 73%;
         margin: 0 auto;
         @include flex();
-        padding:10px 0 ;
+        
 
         .title{
             width: 50%;
@@ -356,9 +357,10 @@ header{
         .gallary{
             width: 100%;
             @include flex();
+            
 
             .sec{
-                width: 31.5%;
+                width: 31.6%;
                 margin: 15px 0;
 
                 video{
@@ -599,6 +601,12 @@ footer{
             min-width: 1300px;
         }
     }
+
+    .examples{
+        .content{
+            min-width: 1370px;
+        }
+    }
 }
 
 @media(max-width:1696px){
@@ -654,16 +662,21 @@ footer{
         }
     }
 
+    .examples{
+        .content{
+            min-width: 1128px;
+
+            .title{
+                width:65%;
+            }
+            .description{
+                width:60%;
+            }
+        }
+    }
+
     
 }
-
-// @media(max-width:1600px)and(max-width:1252px){
-//     .howitworks{
-//         .content{
-//             min-width: 1050px;
-//         }
-//     }
-// }
 
 @media(max-width:1252px){
     header{
@@ -710,6 +723,18 @@ footer{
     .howitworks{
         .content{
             min-width:900px;
+        }
+    }
+
+    .howitworks{
+        .content{
+            min-width:900px;
+        }
+    }
+
+    .examples{
+        .content{
+            min-width:90%;
         }
     }
 }
@@ -797,6 +822,26 @@ footer{
                 display: none;
             }
             
+            .description{
+                width: 100%;
+            }
+        }
+    }
+
+    .examples{
+        .content{
+            min-width: 680px;
+
+            .title{
+                width:100%;
+            }
+
+            .gallary{
+                .sec{
+                    width: 48%;
+                }
+            }
+
             .description{
                 width: 100%;
             }
@@ -931,6 +976,29 @@ footer{
 
             .description{
                 margin: 40px auto;
+            }
+        }
+    }
+
+    .examples{
+        padding: 0;
+        .content{
+            min-width: 90%;
+
+            .title{
+                h1{
+                    font-size: 30px;
+                }
+
+                h2{
+                    font-size: 18px;
+                }
+            }
+
+            .description{
+                h4{
+                    font-size:15px;
+                }
             }
         }
     }

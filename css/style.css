@@ -285,14 +285,14 @@ header nav .booking-slot button a {
 .examples {
   width: 100%;
   background-color: #11272E;
+  padding: 80px 0;
 }
 .examples .content {
-  width: 71.4%;
+  width: 73%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 10px 0;
 }
 .examples .content .title {
   width: 50%;
@@ -316,7 +316,7 @@ header nav .booking-slot button a {
   justify-content: space-between;
 }
 .examples .content .gallary .sec {
-  width: 31.5%;
+  width: 31.6%;
   margin: 15px 0;
 }
 .examples .content .gallary .sec video {
@@ -516,6 +516,10 @@ footer .content .link {
   .howitworks .content {
     min-width: 1300px;
   }
+
+  .examples .content {
+    min-width: 1370px;
+  }
 }
 @media (max-width: 1696px) {
   .home .content .title {
@@ -552,6 +556,16 @@ footer .content .link {
   .howitworks .content {
     min-width: 1050px;
   }
+
+  .examples .content {
+    min-width: 1128px;
+  }
+  .examples .content .title {
+    width: 65%;
+  }
+  .examples .content .description {
+    width: 60%;
+  }
 }
 @media (max-width: 1252px) {
   header nav {
@@ -584,6 +598,14 @@ footer .content .link {
 
   .howitworks .content {
     min-width: 900px;
+  }
+
+  .howitworks .content {
+    min-width: 900px;
+  }
+
+  .examples .content {
+    min-width: 90%;
   }
 }
 @media (max-width: 961px) {
@@ -646,6 +668,19 @@ footer .content .link {
     display: none;
   }
   .howitworks .content .description {
+    width: 100%;
+  }
+
+  .examples .content {
+    min-width: 680px;
+  }
+  .examples .content .title {
+    width: 100%;
+  }
+  .examples .content .gallary .sec {
+    width: 48%;
+  }
+  .examples .content .description {
     width: 100%;
   }
 }
@@ -743,6 +778,22 @@ footer .content .link {
   }
   .howitworks .content .description {
     margin: 40px auto;
+  }
+
+  .examples {
+    padding: 0;
+  }
+  .examples .content {
+    min-width: 90%;
+  }
+  .examples .content .title h1 {
+    font-size: 30px;
+  }
+  .examples .content .title h2 {
+    font-size: 18px;
+  }
+  .examples .content .description h4 {
+    font-size: 15px;
   }
 }
 @media (max-width: 600px) {
