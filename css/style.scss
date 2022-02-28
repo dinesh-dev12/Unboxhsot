@@ -335,7 +335,6 @@ header{
         margin: 0 auto;
         @include flex();
         
-
         .title{
             width: 50%;
             margin: 56px auto 0 auto;
@@ -358,7 +357,6 @@ header{
             width: 100%;
             @include flex();
             
-
             .sec{
                 width: 31.6%;
                 margin: 15px 0;
@@ -394,7 +392,7 @@ header{
         width: 59%;
         margin: 0 auto;
         @include flex();
-        padding: 90px 0;
+        padding:70px 0;
 
         .title{
             width: 100%;
@@ -427,6 +425,7 @@ header{
                 border-radius: 7px;
                 box-shadow:  0 9px 14px rgba(0,0,0,.04), 10px 10px 44px rgba(0,0,0,.1);;
                 padding-top: 38px;
+                
                 .samemargin{
                     margin: 20px auto;
                 }
@@ -466,7 +465,7 @@ header{
 
         .description{
             width: 40%;
-            margin:100px auto;
+            margin:70px auto;
             text-align: center;
             @include flex();
 
@@ -550,7 +549,7 @@ footer{
     width:100%;
 
     .content{
-        width: 33%;
+        width:100%;
         margin: 0 auto;
         text-align: center;
         padding: 85px 0;
@@ -562,9 +561,8 @@ footer{
         }
         
         .buttonlink{
-            
             button{
-                width:33% ;
+                width:200px;
                 height: 55px;
                 color: white;
                 background-color: $buttoncolor;
@@ -605,6 +603,18 @@ footer{
     .examples{
         .content{
             min-width: 1370px;
+        }
+    }
+
+    .pricing{
+        .content{
+            min-width:1100px;
+        }
+    }
+
+    .faqs{
+        .content{
+            min-width:1370px;
         }
     }
 }
@@ -656,6 +666,7 @@ footer{
             }
         }
     }
+
     .howitworks{
         .content{
             min-width: 1050px;
@@ -675,7 +686,17 @@ footer{
         }
     }
 
-    
+    .pricing{
+        .content{
+            min-width:1100px;
+        }
+    }
+
+    .faqs{
+        .content{
+            min-width:1128px;
+        }
+    }
 }
 
 @media(max-width:1252px){
@@ -737,8 +758,21 @@ footer{
             min-width:90%;
         }
     }
+
+    .faqs{
+        .content{
+            min-width:90%;
+        }
+    }
 }
 
+@media(max-width:1135px){
+    .pricing{
+        .content{
+            min-width:90%;
+        }
+    }
+}
 @media(max-width:961px){
     header{
         nav{
@@ -762,7 +796,6 @@ footer{
         .content{
             .title{
                 margin:30px auto;
-                // background-color: bisque;
                 text-align: center;
                 
                 h1{
@@ -847,6 +880,38 @@ footer{
             }
         }
     }
+
+    .pricing{
+        .content{
+            .description{
+                width: 100%;
+                span{
+                    width:100%;
+                }
+
+                a{
+                    width: 100%;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    .faqs{
+        .content{
+            min-width:680px;
+
+            .title{
+                width:60%;
+            }
+        }
+    }
+
+    footer{
+        .content{
+            width:100% ;
+        }
+    }
 }
 
 @media(max-width:840px){
@@ -858,12 +923,10 @@ footer{
                 
                 h1{
                     width:100%;
-                    // margin: 0;
                 }
 
                 h3{
                     width:85%;
-                    // margin: 0;
                 }
             }
         }
@@ -884,7 +947,6 @@ footer{
         position: sticky;
         background-color: white;
         
-
         nav{
             .booking-slot{
                 padding-bottom:5px;
@@ -963,7 +1025,6 @@ footer{
             }
 
             .sec-2{
-                // @include flex();
                 flex-direction: column-reverse;
                 .left{
                     transform:translateX(0);
@@ -1002,13 +1063,61 @@ footer{
             }
         }
     }
+
+    .pricing{
+        .content{
+            padding:10px 0;
+
+            .title{
+                h1{
+                    font-size: 30px;
+                }
+
+                h3{
+                    font-size: 18px;
+                }
+            }
+
+            .cards{
+                width: 100%;
+
+                .box{
+                    width: 100%;
+                    margin-bottom:20px;
+                }
+            }
+
+            .description{
+                margin:40px auto;
+            }
+        }
+    }
+
+    .faqs{
+        .content{
+            min-width:90%;
+            padding:60px 0;
+
+            .title{
+                width:70%;
+                h1{
+                    font-size:30px;
+                }
+            }
+
+            .text{
+                .box{
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
 @media(max-width:600px){
     .home{
         .content{
             .title{
-                
                 h3{
                     font-size: 17px;
                     margin-top:10px;
@@ -1028,7 +1137,6 @@ footer{
                     line-height: 50px;
                     font-weight: 700;
                     font-family:'bold-font';
-
                 }
 
                 h3{
@@ -1036,6 +1144,23 @@ footer{
                     line-height: 30px;
                     margin-top:25px;
                 }
+            }
+        }
+    }
+
+    .faqs{
+        .content{
+            .title{
+                width:100%;
+            }
+        }
+    
+    }
+
+    footer{
+        .content{
+            h1{
+                font-size:20px;
             }
         }
     }
