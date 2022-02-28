@@ -189,12 +189,19 @@ header nav .booking-slot button a {
   background-color: #F8F8F8;
 }
 .howitworks .content {
-  width: 70%;
+  width: 68%;
   margin: 0 auto;
   padding: 80px 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.howitworks .content h2 {
+  font-size: 26px;
+}
+.howitworks .content p {
+  line-height: 30px;
+  margin: 20px 0;
 }
 .howitworks .content .title {
   width: 100%;
@@ -206,52 +213,50 @@ header nav .booking-slot button a {
   letter-spacing: -2px;
   color: #11272E;
 }
-.howitworks .content .sec {
+.howitworks .content .sec-1, .howitworks .content .sec-3 {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 90px;
 }
-.howitworks .content .sec .left {
-  width: 47%;
-  margin: auto 0;
+.howitworks .content .sec-1 .left, .howitworks .content .sec-3 .left {
+  width: 48%;
 }
-.howitworks .content .sec .left img {
+.howitworks .content .sec-1 .left video, .howitworks .content .sec-3 .left video {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 9px 14px rgba(0, 0, 0, 0.04), 10px 10px 44px rgba(0, 0, 0, 0.1);
   transform: rotate(-1deg);
 }
-.howitworks .content .sec .left video {
+.howitworks .content .sec-1 .left img, .howitworks .content .sec-3 .left img {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 9px 14px rgba(0, 0, 0, 0.04), 10px 10px 44px rgba(0, 0, 0, 0.1);
   transform: rotate(-1deg);
 }
-.howitworks .content .sec .left h2 {
-  font-size: 26px;
+.howitworks .content .sec-1 .right, .howitworks .content .sec-3 .right {
+  width: 41%;
+  text-align: justify;
+  margin: auto;
 }
-.howitworks .content .sec .left p {
-  line-height: 30px;
-  margin: 20px 0;
+.howitworks .content .sec-2 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.howitworks .content .sec .right {
-  width: 45%;
-  margin: auto 0;
+.howitworks .content .sec-2 .left {
+  width: 41%;
+  margin: auto;
 }
-.howitworks .content .sec .right img {
+.howitworks .content .sec-2 .right {
+  width: 48%;
+}
+.howitworks .content .sec-2 .right img {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 9px 14px rgba(0, 0, 0, 0.04), 10px 10px 44px rgba(0, 0, 0, 0.1);
   transform: rotate(1deg);
-}
-.howitworks .content .sec .right h2 {
-  font-size: 26px;
-}
-.howitworks .content .sec .right p {
-  line-height: 30px;
-  margin: 20px 0;
 }
 .howitworks .content .svg-arrow1 {
   width: 100%;
@@ -269,7 +274,7 @@ header nav .booking-slot button a {
 }
 .howitworks .content .description {
   width: 50%;
-  margin: 40px auto 80px auto;
+  margin: 100px auto 50px auto;
 }
 .howitworks .content .description h4 {
   line-height: 25px;
@@ -507,6 +512,10 @@ footer .content .link {
   header nav {
     min-width: 1370px;
   }
+
+  .howitworks .content {
+    min-width: 1300px;
+  }
 }
 @media (max-width: 1696px) {
   .home .content .title {
@@ -539,6 +548,10 @@ footer .content .link {
   header nav .booking-slot button a {
     font-size: 16px;
   }
+
+  .howitworks .content {
+    min-width: 1050px;
+  }
 }
 @media (max-width: 1252px) {
   header nav {
@@ -567,6 +580,10 @@ footer .content .link {
   }
   .home .content .title {
     width: 100%;
+  }
+
+  .howitworks .content {
+    min-width: 900px;
   }
 }
 @media (max-width: 961px) {
@@ -599,6 +616,38 @@ footer .content .link {
   .home .content .gallary {
     width: 90%;
   }
+  .home .content .description {
+    width: 80%;
+  }
+
+  .howitworks .content {
+    min-width: 680px;
+  }
+  .howitworks .content h2 {
+    font-size: 21px;
+  }
+  .howitworks .content .sec-1, .howitworks .content .sec-3 {
+    margin-bottom: 40px;
+  }
+  .howitworks .content .sec-1 .left img, .howitworks .content .sec-3 .left img {
+    transform: rotate(0);
+  }
+  .howitworks .content .sec-1 .left video, .howitworks .content .sec-3 .left video {
+    transform: rotate(0);
+  }
+  .howitworks .content .sec-2 {
+    margin-bottom: 40px;
+    flex-direction: row-reverse;
+  }
+  .howitworks .content .sec-2 .right img {
+    transform: rotate(0);
+  }
+  .howitworks .content svg {
+    display: none;
+  }
+  .howitworks .content .description {
+    width: 100%;
+  }
 }
 @media (max-width: 840px) {
   .home .content .title {
@@ -619,8 +668,10 @@ footer .content .link {
 }
 @media (max-width: 740px) {
   header {
-    position: relative;
-    top: -17px;
+    height: 60px;
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: white;
   }
   header nav .booking-slot {
     padding-bottom: 5px;
@@ -630,6 +681,9 @@ footer .content .link {
     height: 37px;
   }
 
+  .home {
+    margin: 40px auto;
+  }
   .home .content {
     margin-top: 0;
   }
@@ -661,6 +715,35 @@ footer .content .link {
     width: 100%;
     margin-bottom: 30px;
   }
+
+  .howitworks .content {
+    min-width: 90%;
+    padding: 0px;
+    padding-bottom: 40px;
+  }
+  .howitworks .content .title h1 {
+    font-size: 30px;
+  }
+  .howitworks .content .sec-1 .left, .howitworks .content .sec-2 .left, .howitworks .content .sec-3 .left {
+    width: 100%;
+  }
+  .howitworks .content .sec-1 .right, .howitworks .content .sec-2 .right, .howitworks .content .sec-3 .right {
+    width: 100%;
+    margin-top: 35px;
+  }
+  .howitworks .content .sec-2 {
+    flex-direction: column-reverse;
+  }
+  .howitworks .content .sec-2 .left {
+    transform: translateX(0);
+    margin-top: 35px;
+  }
+  .howitworks .content .sec-2 .right {
+    transform: translateX(0);
+  }
+  .howitworks .content .description {
+    margin: 40px auto;
+  }
 }
 @media (max-width: 600px) {
   .home .content .title h3 {
@@ -670,7 +753,7 @@ footer .content .link {
 }
 @media (max-width: 500px) {
   .home .content .title h1 {
-    font-size: 45px;
+    font-size: 42px;
     letter-spacing: -1px;
     line-height: 50px;
     font-weight: 700;
